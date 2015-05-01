@@ -46,3 +46,7 @@ function testFunction() {
 };
 
 testFunction();
+
+var f = function() {
+    myConfigConsole.file().log('custom file from anonymous function');
+}();
