@@ -17,7 +17,8 @@ var myConfigConsole = scribe.console({
         timeColors : ['grey', 'underline'],
         dateColors : ['gray', 'bgMagenta'],
         fileColors : 'white',
-        lineColors : ['yellow', 'inverse']
+        lineColors : ['yellow', 'inverse'],
+        funcColors : ['yellow', 'underline'],
     },
 
     createBasic : false                             //Don't create basic loggers
@@ -39,3 +40,9 @@ myConfigConsole.tag('A tag', 123).log('custom tags');
 myConfigConsole.time().log('custom time');
 myConfigConsole.date().log('custom date');
 myConfigConsole.file().log('custom file');
+
+function testFunction() {
+    myConfigConsole.file().log('custom file from within function');
+};
+
+testFunction();
