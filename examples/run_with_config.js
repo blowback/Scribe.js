@@ -47,6 +47,15 @@ function testFunction() {
 
 testFunction();
 
+function testFunction2() {
+    function testFunction2Inner() {
+        myConfigConsole.file().log('custom file from within inner function');
+    };
+    testFunction2Inner();
+};
+
+testFunction2();
+
 var f = function() {
     myConfigConsole.file().log('custom file from anonymous function');
 }();
